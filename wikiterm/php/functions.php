@@ -13,7 +13,9 @@ function getInput() {
  * @param  String $filename    Name of file where link needs to be logged
  * @return null
  */
-function logLinks($search_term, $filename = NULL) {
+function logLinks($search_term, $filename) {
+  $filename = empty($filename) ? FILE_NAME : $filename;
+
   $params = array(
     "action"=> "opensearch",
     "format" => "json",
