@@ -1,0 +1,21 @@
+{
+  "name": "phonenumber",
+  "version": "1.0.0",
+  "description": "Command line tool to validate phonenumbers",
+  "main": "cli.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "phonenumber": "./cli.js"
+  },
+  "directories": {
+    "man": "doc/man"
+  },
+  "author": "Manraj Singh <manrajsinghgrover@gmail.com> (http://manrajsingh.in)",
+  "license": "MIT",
+  "dependencies": {
+    "inquirer": "^1.1.3",
+    "yargs": "^5.0.0"
+  }
+}

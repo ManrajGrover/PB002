@@ -1,0 +1,32 @@
+.TH phonenumber
+.SH phonenumber
+.PP
+Command line interface in node for checking validity of a number
+.SS Installation
+.IP "1." 3
+Clone the repository and change directory to the folder.
+.IP "2." 3
+Run \f[C]npm\ install\f[] to install all dependencies.
+.IP "3." 3
+Run \f[C]sudo\ npm\ link\f[] to link the package.
+.SS How to use it?
+.IP "1." 3
+Run \f[C]phonenumber\ \-p\ [YourNumber]\f[] to validate the number.
+.IP "2." 3
+Run \f[C]phonenumber\f[] and enter number in the field prompted.
+.SS Flags available
+.IP
+.nf
+\f[C]
+Usage:\ phonenumber\ \-p\ [num]
+
+Options:
+\ \ \-p,\ \-\-phone\ \ Phone\ number\ to\ be\ validated\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ [string]
+\ \ \-h,\ \-\-help\ \ \ Show\ help\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ [boolean]
+\f[]
+.fi
+.SS Dependencies
+.IP \[bu] 2
+inquirer \- For prompting questions and getting inputs.
+.IP \[bu] 2
+yargs \- For parsing command line flags and inputs.

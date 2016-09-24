@@ -1,0 +1,5 @@
+.DS_Store
+/phonenumber/node_modules
+/phonenumber/npm-debug.log
+/wikiterm/node/node_modules
+/wikiterm/node/npm-debug.log
