@@ -29,4 +29,4 @@ Options:
 
 ## Read `man` pages
 
-man phonenumber
+`man phonenumber`
