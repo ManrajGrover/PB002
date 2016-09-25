@@ -5,7 +5,6 @@
 const yargs = require('yargs');
 const inquirer = require('inquirer');
 const ora = require('ora');
-const chalk = require('chalk');
 const request = require('request');
 const fs = require('fs');
 
