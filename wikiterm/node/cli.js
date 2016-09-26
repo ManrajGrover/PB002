@@ -67,7 +67,7 @@ const logLink = (query, logFileName) => {
  * Command line interface code for the app
  */
 const argv = yargs
-  .usage('Usage: $0 -s [string]')
+  .usage('Usage: $0 -s [SearchTerm] -f [FileName]')
   .option('s', {
     alias: 'search',
     describe: 'String to be searched',
