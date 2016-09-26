@@ -6,6 +6,10 @@ Command line interface in PHP for logging Wikipedia Links
 1. Run `wikiterm -s [SearchTerm] -f [FileName]` to validate the number.
 2. Run `wikiterm` and enter inputs in the fields prompted.
 
+## Install dependencies
+
+Run `composer install` to install all dependencies.
+
 ## Flags available
 
 ```
