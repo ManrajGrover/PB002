@@ -1,7 +1,5 @@
 #!/usr/bin/env node
 
-"use strict";
-
 const yargs = require('yargs');
 const inquirer = require('inquirer');
 const validateNumber = require('./helpers').validateNumber;
@@ -11,11 +9,10 @@ const validateNumber = require('./helpers').validateNumber;
  * @return undefined
  */
 const checkNumber = (phoneNumber) => {
-  if(validateNumber(phoneNumber)) {
-    console.log("Valid");
-  }
-  else {
-    console.log("Invalid");
+  if (validateNumber(phoneNumber)) {
+    console.log('Valid');
+  } else {
+    console.log('Invalid');
   }
 };
 
@@ -27,19 +24,19 @@ const argv = yargs
   .option('p', {
     alias: 'phone',
     describe: 'Phone number to be validated',
-    type: 'string'
+    type: 'string',
   })
   .help('h')
   .alias('h', 'help')
   .argv;
 
 // Collect phone number passed from arguement
-let phone_number = argv.phone;
+let phoneNumber = argv.phone;
 
 /**
  * Check if no input was passed through CLI mode
  */
-if(phone_number === undefined) {
+if (phoneNumber === undefined) {
   /**
    * Array of objects asking questions to user
    * for input
@@ -47,21 +44,20 @@ if(phone_number === undefined) {
    */
   const questions = [{
     type: 'input',
-    name: 'phone_number',
-    message: 'Please enter a phone number to be validated'
+    name: 'phoneNumber',
+    message: 'Please enter a phone number to be validated',
   }];
 
   /**
    * Prompt questions to user and get answer to process
    */
   inquirer.prompt(questions).then((answers) => {
-    phone_number = answers.phone_number;
-    checkNumber(phone_number);
+    phoneNumber = answers.phoneNumber;
+    checkNumber(phoneNumber);
   });
-}
-else {
+} else {
   /**
    * Check for phone number validation
    */
-  checkNumber(phone_number);
+  checkNumber(phoneNumber);
 }
