@@ -1,8 +1,11 @@
 #!/usr/bin/env python
+"""CLI for searching and getting link of topic from wikipedia
+"""
 import click
 import requests
 import constants
 import sys
+
 
 @click.command()
 @click.option('--search', prompt='Search term',
@@ -12,9 +15,15 @@ import sys
 def main(search, file):
     """
     Programs that gets link of particular topic from wikipedia
-    and logs it to provided file 
-    """
+    and logs it to provided file
 
+    Parameters
+    ----------
+    search : str
+        String to be searched
+    file : str
+        File name
+    """
     payload = {
         "action": "opensearch",
         "format": "json",
@@ -27,14 +36,14 @@ def main(search, file):
     r = requests.get(constants.API_URL, params=payload)
 
     data = r.json()
-    searchLinks = data[3]
+    search_links = data[3]
 
-    if (len(searchLinks) == 0):
-        print "No link found!";
+    if (len(search_links) == 0):
+        print "No link found!"
     else:
         try:
             file = open(file, 'a')
-            file.write(searchLinks[0]+"\n")
+            file.write(search_links[0] + "\n")
             file.close()
             print "Link has been logged!"
         except:
